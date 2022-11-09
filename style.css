@@ -1,0 +1,137 @@
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#navtop img{
+   
+width: 100%;
+}
+
+#navbar{
+    /* border: 1px solid blue; */
+    display: flex;
+    height: 100px;
+   margin-left: -15px;
+}
+#navbar img{
+    /* width: 50%; */
+   
+    height: 120px;
+    margin-left: 70px;
+    margin-top: -5px;
+    border-radius: 50%;
+    border: 1px solid blue
+}
+
+#navbar>div:nth-child(4){
+    border: 1px solid #DD0285;
+    height: 32px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    color: white;
+    background-color: #DD0285;
+    
+
+    /* margin: auto; */
+}
+.search{
+    border: 1px solid black;
+    /* width: 30px; */
+    height: 30px;
+    margin-top: 30px;
+
+}
+#selectcat{
+    height: 34px;
+    width: 205px;
+}
+
+
+  
+#navbar>div:nth-child(5){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 30px;
+    border: 1px solid black;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 290px;
+    font-size: 20px;
+}
+
+#navbar>div:nth-child(6){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    border: 1px solid rgb(140, 135, 135);
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+#navbar>div:nth-child(7){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    /* margin-right: 10px; */
+}
+
+#navbar>div:nth-child(1){
+    display: flex;
+    /* border: 1px solid green; */
+    width: 650px;
+}
+
+#p1{
+    color: #DD0285;
+    font-size: 25px;
+    /* border: 1px solid blueviolet; */
+}
+#p2{
+    /* border: 1px solid red; */
+   margin-top: -20px;
+   /* margin-right: -20px; */
+   text-align: center;
+}
+
+
+#mid-nav{
+ display: flex;
+ /* justify-content: space-between; */
+ background-color: #DD0285;
+ justify-content: space-around;
+ border: 1px solid blue;
+ height: 40px;
+ font-size: 25px;
+ text-align: center;
+ 
+}
+
+#mid-nav>div:nth-child(9){
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    margin-top: 8px;
+    color: white;
+    /* justify-content: space-around; */
+}
+
+#mid-nav>select{
+    border: none;
+    background-color: #DD0285;
+    
+}
