@@ -18,13 +18,13 @@ width: 100%;
    margin-left: -15px;
 }
 #navbar img{
-    /* width: 50%; */
+    width: 15%;
    
-    height: 120px;
+    height: 90px;
     margin-left: 70px;
-    margin-top: -5px;
+    margin-top: 3px;
     border-radius: 50%;
-    border: 1px solid blue
+    border: 1px solid #DD0285
 }
 
 #navbar>div:nth-child(4){
@@ -98,12 +98,16 @@ width: 100%;
 
 #p1{
     color: #DD0285;
-    font-size: 25px;
+    font-size: 27px;
+    margin-left: 7px;
+    /* margin-bottom: 1px; */
     /* border: 1px solid blueviolet; */
 }
 #p2{
     /* border: 1px solid red; */
    margin-top: -20px;
+   font-size: 20px;
+   margin-bottom: 20px;
    /* margin-right: -20px; */
    text-align: center;
 }
@@ -114,7 +118,7 @@ width: 100%;
  /* justify-content: space-between; */
  background-color: #DD0285;
  justify-content: space-around;
- border: 1px solid blue;
+ /* border: 1px solid blue; */
  height: 40px;
  font-size: 25px;
  text-align: center;
@@ -130,8 +134,303 @@ width: 100%;
     /* justify-content: space-around; */
 }
 
-#mid-nav>select{
+#mid-nav>div>select{
     border: none;
     background-color: #DD0285;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+/* ----------------------------------------------top banner style----------------------------------------------------- */
+#top-banner{
     
+    /* height: 20%; */
+    box-sizing: border-box;  
+    border: 2px solid blue;
+    display: flex;
+    width: 80%;
+    height: 480px;
+    margin: auto;
+    margin-top: 11px;
+
+}
+
+#top-banner>div{
+   
+        width:98%;
+        height:100%;
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+        /* align-items: center; */
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        flex-direction: column;
+}
+
+#top-banner>div{
+        transition: top 0.3s; 
+        border: 2px solid greenyellow;
+        width: 25%;
+        height: 85%;
+        margin-left: 13px;
+        margin-top: 6px;
+        /* height: 100%; */
+}
+
+
+
+#top-banner>div>div{
+   
+        float: left;
+        display: block;
+        text-decoration: none;
+        /* width: 45%; */
+       /* border: 2px solid purple; */
+        
+}
+
+#top-banner-p>div>button{
+   
+        background-color: white;
+        color: #2f3337;
+        border:0;
+        height:100%;
+        font-size: 14px;
+   
+}
+
+#top-banner-p>div>button:hover{
+    text-decoration-line: underline;
+    color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* **************************    drop navbar styling  **********************************/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 65%;
+    left: 10;
+    z-index: 1;
+  }
+
+  #dropdown-makeup:hover .dropdown-content{
+  
+        display: block;
+      
+  }
+  #dropdown-skin:hover .dropdown-content {
+    display: block;
+     position:fixed;
+     margin: auto;
+    left: 10%;
+  }
+
+  #dropdown-hair:hover .dropdown-content {
+    display: block;
+     position:fixed;
+     margin: auto;
+    left: 10%;
+  }
+
+  #dropdown-personal-care:hover .dropdown-content {
+    display: block;
+     position:fixed;
+     margin: auto;
+    left: 10%;
+  }
+
+  #dropdown-Mom-Baby:hover .dropdown-content {
+    display: block;
+     position:fixed;
+     margin: auto;
+    left: 10%;
+  }
+
+  #allcat{
+    display: flex;
+    gap: 12px;
+    font-weight: bold;
+  }
+
+  .catimg{
+    display: flex;
+    gap: 5px;
+ }
+
+ .catimg>button{
+    border: none;
+    background-color: white;
+    font-size: 16px;
+ }
+  /* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 22%;
+    padding: 8px;
+    background-color: white;
+    height: auto;
+    font-size: 14px;
+    margin-right: 8px;
+  }
+
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    /* display: table-row; */
+    clear: both;
+  }
+
+  #dropdown-hidden_ele{
+    visibility: hidden;
+   }
+
+
+   #dropdown-makeup{
+    /* border: 2px solid blueviolet; */
+    margin-left: 0px;
+   }
+
+   #dropdown-skin{
+    /* border: 2px solid rgb(27, 25, 18); */
+    margin-left: 0px;
+   }
+
+   #top-banner-p{
+    /* border: 2px solid peru; */
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+   }
+
+   .catimg>button{
+    padding: 7px;
+    /* border: 1px solid red; */
+   }
+
+   #frag{
+    margin-left: 4.7px;
+   }
+
+   #ayur{
+    margin-left: 4.7px;
+   }
+
+   #midimg>div{
+    width: 80%;
+    border: 2px solid black;
+   }
+
+   #top-banner>div:nth-child(2)>img{
+     border: 2px solid crimson;
+     /* width: 90%; */
+     height: 100%;
+   }
+
+   #top-banner>div:nth-child(2){
+    width: 90%;
+    /* height: 100%; */
+   }
+   
+   /* --------------------------------BOTTOM NAVBAR Styling End---------------------------------- */
+
+
+   /* ............................mid-banner(1). START.................................................... */
+
+
+  #mid-banner-1{
+
+    border: 2px solid blue;
+    width: 80%;
+    height: 240px;
+    margin: auto;
+    margin-top: 11px;
+
+}
+
+#mid-banner-1>img{
+  width: 100%;
+}
+
+/* ...........................................................mid-banner(2)...............................................................................  */
+
+
+#mid-banner-2{
+  /* border: 1px dashed darkblue; */
+  display: flex;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 11px;
+  text-align: center;
+}
+
+#mid-banner-2>div>img{
+  width: 100%;
+}
+
+#mid-banner-2>div{
+  border: 2px solid yellowgreen;
+}
+
+#mid-banner-2>div>p{
+  width: 90%;
+  align-items: center;
+  text-align: center;
+}
+
+#mid-banner-2>div>button{
+  color: white;
+  background-color: #E74EAA;
+  padding: 6px;
+}
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<      mid-banner(3)        >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+#mid-banner-3{
+  border: 2px solid brown;
+  display: flex;
+  width: 80%;
+  height: 300px;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  justify-content: space-between;
+  gap: 27px;
+}
+
+#mid-banner-3>div>img{
+  /* border: 5px solid black; */
+  width: 100%;
+  margin-top: 10px;
+ 
+}
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<          mid-banner(4)           >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+#mid-banner-4{
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  height: 100px;
+  margin: auto;
+  margin-top: 10px;
+ 
+}
+
+#mid-banner-4>div{
+ 
+  text-align: center;
+  margin: auto;
+  border: 1px solid black;
+  /* justify-content: space-between; */
 }
