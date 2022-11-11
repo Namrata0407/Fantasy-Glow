@@ -117,21 +117,39 @@ width: 100%;
  display: flex;
  /* justify-content: space-between; */
  background-color: #DD0285;
- justify-content: space-around;
+ /* justify-content: space-around; */
  /* border: 1px solid blue; */
  height: 40px;
  font-size: 25px;
  text-align: center;
+ /* gap: 10px; */
  
 }
 
+#mid-nav>div{
+  /* border: 2px solid black; */
+  justify-content: space-around;
+  margin-left: 5px;
+  
+}
 #mid-nav>div:nth-child(9){
     display: flex;
     justify-content: space-between;
     font-size: 17px;
     margin-top: 8px;
     color: white;
+    border: #DD0285;
+    background-color: #DD0285;
+    /* border: 2px solid black; */
     /* justify-content: space-around; */
+}
+
+#but{
+  background-color: #DD0285;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 17px;
 }
 
 #mid-nav>div>select{
@@ -148,7 +166,7 @@ width: 100%;
     
     /* height: 20%; */
     box-sizing: border-box;  
-    border: 2px solid blue;
+    border: 1px solid rgb(210, 208, 208) ;
     display: flex;
     width: 80%;
     height: 480px;
@@ -172,7 +190,7 @@ width: 100%;
 
 #top-banner>div{
         transition: top 0.3s; 
-        border: 2px solid greenyellow;
+        /* border: 2px solid greenyellow; */
         width: 25%;
         height: 85%;
         margin-left: 13px;
@@ -216,7 +234,7 @@ width: 100%;
     background-color: white;
     width: 65%;
     left: 10;
-    z-index: 1;
+    /* z-index: 1; */
   }
 
   #dropdown-makeup:hover .dropdown-content{
@@ -324,11 +342,11 @@ width: 100%;
 
    #midimg>div{
     width: 80%;
-    border: 2px solid black;
+    border: 1px solid rgb(210, 208, 208);
    }
 
    #top-banner>div:nth-child(2)>img{
-     border: 2px solid crimson;
+     /* border: 2px solid rgb(210, 208, 208); */
      /* width: 90%; */
      height: 100%;
    }
@@ -337,7 +355,15 @@ width: 100%;
     width: 90%;
     /* height: 100%; */
    }
+
+
    
+   .column>option{
+    font-size: 20px;
+    color: gray;
+   }
+
+
    /* --------------------------------BOTTOM NAVBAR Styling End---------------------------------- */
 
 
@@ -346,7 +372,7 @@ width: 100%;
 
   #mid-banner-1{
 
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     width: 80%;
     height: 240px;
     margin: auto;
@@ -376,7 +402,7 @@ width: 100%;
 }
 
 #mid-banner-2>div{
-  border: 2px solid yellowgreen;
+  border: 1px solid rgb(210, 208, 208);
 }
 
 #mid-banner-2>div>p{
@@ -389,13 +415,14 @@ width: 100%;
   color: white;
   background-color: #E74EAA;
   padding: 6px;
+  margin-bottom: 15px;
 }
 
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<      mid-banner(3)        >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 #mid-banner-3{
-  border: 2px solid brown;
+  /* border: 1px solid rgb(210, 208, 208); */
   display: flex;
   width: 80%;
   height: 300px;
@@ -417,11 +444,11 @@ width: 100%;
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<          mid-banner(4)           >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 #mid-banner-4{
-  border: 1px solid black;
+  border: 1px solid rgb(210, 208, 208);
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   width: 80%;
-  height: 100px;
+  /* height: 100px; */
   margin: auto;
   margin-top: 10px;
  
@@ -431,6 +458,336 @@ width: 100%;
  
   text-align: center;
   margin: auto;
-  border: 1px solid black;
+  height: 100px;
+  width: 100%;
+  border: none;
+  border: 1px solid rgb(210, 208, 208);
+  
   /* justify-content: space-between; */
 }
+
+#mid-banner-4>div>img{
+  margin-top: 5px;
+}
+
+#mid-banner-4>div:hover{
+  background-color: #ef85c5;
+  color: white;
+  
+}
+
+#mid-banner-4>div>img{
+  color: white;
+}
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<     mid-banner(5)    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+#mid-banner-5{
+  /* border: 1px dashed darkblue; */
+  display: flex;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 11px;
+  text-align: center;
+}
+
+#mid-banner-5>div>img{
+  width: 100%;
+}
+
+#mid-banner-5>div{
+  border: 1px solid rgb(210, 208, 208);
+}
+
+#mid-banner-5>div>p{
+  width: 90%;
+  align-items: center;
+  text-align: center;
+}
+
+#mid-banner-5>div>button{
+  color: white;
+  background-color: #E74EAA;
+  padding: 6px;
+  margin-bottom: 15px;
+}
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<   mid-banner(6)    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+#mid-banner-6{
+
+  /* border: 2px solid blue; */
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 17px;
+
+}
+
+#mid-banner-6>img{
+width: 100%;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<    banner-last  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+#banner-last{
+  /* border: 1px solid brown; */
+  width: 80%;
+  /* height: 300px; */
+  height: auto;
+  margin: auto;
+  margin-top: 40px;
+}
+
+#banner-last>img{
+width: 100%;
+}
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<     last-passage >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+#passage{
+  width: 80%;
+  margin: auto;
+  /* border: 1px solid rgb(125, 50, 205); */
+  height: 900px;
+  text-align: left;
+} 
+ 
+#passage>#h1{
+  font-size: 27px;
+  color: gray;
+}
+
+b{
+  color: rgb(66, 63, 63);
+}
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  footer >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* -------------------------------- FOOTER Styling Start ------------------------------------- */
+  /* Footer Top Styling */
+  #footer-mid{
+   height: 230px;
+  margin-top: -152px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 45px 25px;
+  line-height: 15px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: #232323; */
+  background-color: #232323;
+  color: rgb(247, 242, 242);
+   }
+
+  #footer-mid>div{
+    width:15%;
+   
+   }
+
+  #footer-mid-hidden-ele{
+   visibility: hidden;
+  }
+
+  #footer-mid-nykaa-logo{
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  }
+
+  #footer-mid-title{
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  }
+
+  #footer-mid>div>p:hover{
+  cursor: pointer;
+  color: #DD0285;
+  }
+
+
+  .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  }
+
+
+  #footer{
+  padding-top: 173px;
+  /* border: 3px solid brown; */
+  /* height: 200px; */
+  }
+
+ /* -------------------------------- FOOTER-TOP Styling END ------------------------------------- */
+                              
+/* -------------------------------- FOOTER-BOTTOM Styling Start ------------------------------------- */
+  #footer-bottom{
+  border: 1px solid rgb(109, 107, 107);
+  background-color: black;
+  height: 30px;
+  text-align: center;
+  color: rgb(185, 176, 176);
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+   }
+
+
+#footer-bottom>div{
+  text-align: center;
+  margin-top: 8px;
+}
+
+  .fntp{
+    color: #DD0285;
+  }
+
+  #fb{
+    display: flex;
+    gap: 10px;
+    
+  }
+
+  #fb>div{
+    border: 1px solid wheat;
+    size: 52px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 7px;
+    border-radius: 45%;
+    font-size: 16px;
+    background-color: #DD0285;
+    border: none;
+    
+  }
+/* .............................................footer-img.......................................................................... */
+ #footerimg{
+  display: flex;
+  margin: auto;
+  background-color: #232323;
+  /* text-align: center;
+  align-items: center;
+  justify-content: center; */
+ }
+
+ #footerimg>div:nth-child(1){
+  margin-left: 140px;
+ }
+ #footchild{
+  display: flex;
+  margin-left: 440px;
+  gap: 18px;
+ }
+  
+ #footchild>div:nth-child(1){
+  /* border: 2px solid blue; */
+  margin-left: -180px;
+  font-size: 18px;
+  font-weight: bold;
+  align-items: center;
+  margin-top: 5px;
+  padding: 15px;
+  color: white;
+ 
+ }
+
+ #footchil{
+  display: flex;
+  /* border: 1px solid rgb(185, 183, 181); */
+  
+ }
+
+
+ #footchild>#footchil{
+  /* border: 1px solid peru; */
+  width: 370px;
+  height: 50px;
+  border: none;
+ }
+ 
+ #footchild>#footchil>div>input{
+ height: 89%;
+
+ width: 250px;
+ font-size: 18px;
+ text-align: center;
+ }
+ 
+ #footchild>#footchil>div>button{
+background-color: #DD0285;
+/* height: auto; */
+border: none;
+width: 113px;
+height: 100%;
+}
+
+
+
+/* -------------------------------- FOOTER-BOTTOM Styling End ------------------------------------- */
+
+
+/* ????????????????????????????????????????? dropdown ki alg se property ?????????????????????????????????????????????????????????????????????? */
+
+ #DD{
+  /* border: 4px solid purple; */
+   border: 2px solid grey;
+  position: fixed;
+  margin-left: 15%;
+  height: 350px;
+  margin-top: -40px;
+ }
+ #DD2{
+  position: relative;
+   /* border: 3px solid black; */
+  margin-left: 150px;
+  /* border: 2px solid grey; */
+  position: fixed;
+  margin-left: 15%;
+  height: 350px;
+  margin-top: -40px;
+ }
+
+ #dropdown-skin>#DD2{
+  border: 1px solid grey;
+  /* border: 3px solid black; */
+  margin-left: 15%;
+  height: 350px;
+  margin-top: -40px;
+ }
+
+ #dropdown-hair>#DD3{
+  border: 1px solid grey;
+  /* border: 3px solid black; */
+  margin-left: 15%;
+  height: 350px;
+  margin-top: -40px;
+ }
+
+ #dropdown-personal-care>#DD4{
+  border: 1px solid grey;
+  /* border: 3px solid black; */
+  margin-left: 15%;
+  height: 350px;
+  margin-top: -40px;
+
+ }
+
+ #dropdown-Mom-Baby>#DD5{
+  border: 1px solid grey;
+  /* border: 3px solid black; */
+  margin-left: 15%;
+  height: 350px;
+  margin-top: -40px;
+ }
+
+ /* ?????????????????????????????????????? dropdown ki property yha pe finish hogyi ?????????????????????????????????????????????????????? */

@@ -94,3 +94,57 @@ let data = [
  }
 
 appendItem();
+
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<          mid-banner-5             >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+let data1 = [
+
+    {
+        image1: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/d/2/d28bf778903487024816_1.jpg",
+        title1: "Miss Claire Blusher Kit - 3660-B-3",
+        price1:  410.00, 
+    },
+    {
+        image1: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/3/7/3732f778903487000209_1.jpg",
+        title1: "Miss Claire Eyeshadow Kit - 3716-11-3",
+        price1:  395.00, 
+    },
+    {
+        image1: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/b/d/bdd30238903487002319_1.jpg",
+        title1: "Miss Claire M20 - Pointed Blending",
+        price1:  375.00, 
+    },
+    {
+        image1: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/6/1/610f0238903487002296_1.jpg",
+        title1: "Miss Claire M19 - Eyeshadow Blending",
+        price1:  375.00, 
+    },
+];
+
+
+function appendItem1(){
+    data1.forEach(function(el,i){
+        console.log(el.title1,el.price1)
+
+        let div2 = document.createElement('div');
+
+        let img1 = document.createElement('img');
+        img1.setAttribute('src',el.image1);
+
+        let title1 = document.createElement('p');
+        title1.innerText = el.title1;
+
+        let price1 = document.createElement('p');
+        price1.innerText = "₹" + el.price1;
+
+        let add1 = document.createElement('button');
+        add1.innerText = "Add to cart";
+
+        div2.append(img1,title1,price1,add1);
+        document.querySelector('#mid-banner-5').append(div2)
+
+    })
+ }
+
+appendItem1();
