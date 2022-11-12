@@ -791,3 +791,157 @@ height: 100%;
  }
 
  /* ?????????????????????????????????????? dropdown ki property yha pe finish hogyi ?????????????????????????????????????????????????????? */
+
+
+ /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  for fav button >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+ 
+ 
+ .divfav{
+  /* border: 1px solid darkgreen; */
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 40%;
+  justify-content: space-between;
+  margin-bottom: 8px;
+ }
+ 
+ .div2Fav{
+  height: 100%;
+  /* border: 1px solid darkred; */
+  padding: 5px;
+  color: white;
+  background-color: #2f3337;
+ }
+
+ .div2Fav:hover{
+  color: #f6b9de;
+ }
+
+ .div2Fav:hover{
+  cursor: pointer;
+ }
+ .btnAddtOfAV{
+  padding: 7px;
+  color: white;
+  background-color: #DD0285;
+  border: none;
+ }
+ .btnAddtOfAV{
+  cursor: pointer;
+ }
+ .btnAddtOfAV:hover{
+  color: #f6b9de;
+ }
+/* ......................................................................................................................... */
+
+.div4fav{
+  /* border: 1px solid darkgreen; */
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 40%;
+  justify-content: space-between;
+  margin-bottom: 8px;
+
+ }
+
+ .div3Fav{
+  height: 100%;
+  /* border: 1px solid darkred; */
+  padding: 5px;
+  color: white;
+  background-color: #2f3337;
+ }
+
+ .div3Fav{
+  cursor: pointer;
+ }
+
+ .div3Fav:hover{
+  color: #f6b9de;
+ }
+
+ .btnAddtOfAV1{
+  padding: 7px;
+  color: white;
+  background-color: #DD0285;
+  border: none;
+ }
+ .btnAddtOfAV1{
+  cursor: pointer;
+ }
+
+ .btnAddtOfAV1:hover{
+  color: #f6b9de;
+ }
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<   for fav page   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+ 
+
+  #myfav:hover{
+    
+    color: white;
+    background-color: #DD0285;
+  }
+
+
+  #myfav{
+    cursor: pointer;
+  }
+  #fovcontainer{
+    /* border: 1px solid darkblue; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* width: 50%; */
+    margin: auto;
+    /* justify-content: space-around; */
+    justify-content: space-between;
+    gap:30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  #fovcontainer>div{
+    /* border: 2px solid green; */
+    width: 100%;
+    height: 100%;
+    /* justify-content: space-between; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+
+  #fovcontainer>div>img{
+    width: 100%;
+  }
+
+  #h1wish{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+    border: 2px solid palevioletred;
+    margin-bottom: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color: #f6b9de;
+  }
+
+  #h1wish:hover{
+    color: #fb0599;
+  }
+
+
+
+
+
+ /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<       for mycart page       >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+ 
+
+ #but:hover{
+  cursor: pointer;
+  background-color: #fb0599;
+ }
+
+ #cart-container{
+  background-color: #f6b9de;
+ }
