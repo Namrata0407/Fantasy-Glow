@@ -71,7 +71,8 @@ let data = [
 
  function appendItem(){
     data.forEach(function(el,i){
-        console.log(el.title,el.price)
+        // console.log(el.title,el.price)
+        // document.querySelector('#mid-banner-2').innerHTML = "";
 
         let div1 = document.createElement('div');
 
@@ -85,17 +86,54 @@ let data = [
         price.innerText = "₹" + el.price;
 
         let add = document.createElement('button');
+        add.classList.add("btnAddtOfAV")
         add.innerText = "Add to cart";
+        add.addEventListener('click',function(){
+            addtoCart1(el)
+        })
+        
 
-        div1.append(img,title,price,add);
+        let div2 = document.createElement('div');
+        div2.classList.add("div2Fav");
+       
+        div2.addEventListener('click', function(){
+            console.log(el)
+            addtofav1(el);
+        })
+        let itag = document.createElement('i');
+        itag.classList.add('fa-solid');
+        itag.classList.add("fa-heart")
+        div2.append(itag);
+
+        let div3 = document.createElement("div");
+        div3.append(add,div2);
+        div3.classList.add("divfav");
+
+
+        div1.append(img,title,price,div3);
         document.querySelector('#mid-banner-2').append(div1)
 
     })
  }
 
 appendItem();
+                  
 
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<           functionality of add to fav           >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+function addtofav1(el){
+   
+    let newData1 = JSON.parse(localStorage.getItem("fav-products")) || [];
+    newData1.push(el);
+
+    localStorage.setItem('fav-products',JSON.stringify(newData1))
+    appendItem1(newData1);
+    alert("Product has been added to your Wish List");
+   
+}
+document.querySelector("#myfav").addEventListener("click",function(){
+    window.open("fav.html","_self");
+})
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<          mid-banner-5             >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 let data1 = [
@@ -139,12 +177,89 @@ function appendItem1(){
         price1.innerText = "₹" + el.price1;
 
         let add1 = document.createElement('button');
+        add1.classList.add("btnAddtOfAV1")
         add1.innerText = "Add to cart";
+        add1.addEventListener('click',function(){
+            addtoCart(el)
+        })
 
-        div2.append(img1,title1,price1,add1);
+        let div3 = document.createElement('div');
+        div3.classList.add("div3Fav");
+        div3.addEventListener('click', function(){
+            // console.log(el)
+            addtofav(el);
+        })
+
+        let itag = document.createElement('i');
+        itag.classList.add('fa-solid');
+        itag.classList.add("fa-heart")
+        div3.append(add1, itag);
+
+
+
+        let div4 = document.createElement("div");
+        div4.append(add1,div3);
+        div4.classList.add("div4fav");
+
+        div2.append(img1,title1,price1,div4);
         document.querySelector('#mid-banner-5').append(div2)
 
     })
  }
 
 appendItem1();
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<           functionality of add to fav           >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  function addtofav(el){
+   
+   
+
+    let newData = JSON.parse(localStorage.getItem("fav-products")) || [];
+    newData.push(el);
+
+    localStorage.setItem('fav-products',JSON.stringify(newData))
+    appendItem1(newData);
+    alert("Product has been added to your Wish List");
+   
+}
+// ....................................................................................................................................
+
+document.querySelector("#myfav").addEventListener("click",function(){
+    window.open("fav.html","_self");
+})
+
+
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<      functionality to add to cart       >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+function addtoCart(el){
+   
+
+    let newData1 = JSON.parse(localStorage.getItem("cart-Products")) || [];
+    newData1.push(el);
+
+    localStorage.setItem('cart-Products',JSON.stringify(newData1))
+    appendItem1(newData1);
+    alert("Product has been added to your Cart");
+   
+}
+
+document.querySelector("#but").addEventListener("click",function(){
+    window.open("cart.html","_self");
+})
+// .......................................................................................................................................
+
+function addtoCart1(el){
+   
+
+    let newData2 = JSON.parse(localStorage.getItem("cart-Products")) || [];
+    newData2.push(el);
+
+    localStorage.setItem('cart-Products',JSON.stringify(newData2))
+    appendItem1(newData2);
+    alert("Product has been added to your Cart");
+}
+document.querySelector("#but").addEventListener("click",function(){
+    window.open("cart.html","_self");
+})

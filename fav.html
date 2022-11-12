@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div id="h1wish">♥ My Wishlist Products ♥ </div>
+    <div id="fovcontainer">
+
+    </div>
+</body>
+</html>
+<script>
+    let favProducts = JSON.parse(localStorage.getItem('fav-products'))  ||  [];
+     favCart(favProducts);
+       console.log(favProducts);
+
+     function favCart(data){
+        data.forEach(function(el,i){
+       
+
+        let div2 = document.createElement('div');
+
+        let img1 = document.createElement('img');
+        img1.setAttribute('src',el.image);
+
+        let title1 = document.createElement('p');
+        title1.innerText = el.title;
+
+        let price1 = document.createElement('p');
+        price1.innerText = "₹" + el.price;
+
+        let add1 = document.createElement('button');
+        add1.classList.add("btnAddtOfAV1")
+        add1.innerText = "Add to cart";
+
+       
+
+        div2.append(img1,title1,price1,add1);
+        console.log(div2)
+        
+        document.querySelector('#fovcontainer').append(div2);
+
+    })
+    }
+
+
+</script>
