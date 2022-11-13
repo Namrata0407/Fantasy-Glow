@@ -907,6 +907,7 @@ height: 100%;
     /* border: 2px solid green; */
     width: 100%;
     height: 100%;
+    margin-bottom: 7px;
     /* justify-content: space-between; */
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
@@ -942,6 +943,101 @@ height: 100%;
   background-color: #fb0599;
  }
 
- #cart-container{
-  background-color: #f6b9de;
+ #cartProducts_Div>div{
+  /* border: 14px solid blue; */
+  /* border: 2px solid green; */
+  /* width: 100%; */
+  /* height: 100%; */
+  margin-bottom: 7px;
+  /* justify-content: space-between; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
  }
+
+ #cartProducts_Div{
+  border: 1px solid darkblue;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  /* width: 50%; */
+  margin: auto;
+  /* justify-content: space-around; */
+  justify-content: space-between;
+  gap:30px;
+  align-items: center;
+  text-align: center;
+ 
+}
+
+#cartProducts_Div>img{
+  width: 100%;
+}
+
+#carth1{
+  text-align: center;
+  /* border: 1px solid #C60277; */
+}
+
+#cartspan{
+  border: 1px solid blue;
+  background: #ef85c5;
+  margin-bottom: 15px;
+}
+
+/* .................................................................................................................................... */
+.userButton{
+  position: relative;
+}
+#regislogin{
+  /* position: fixed; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 80px;
+  margin-left: 90%;
+  margin-top: 80px;
+  padding: 10px;
+  position: absolute;
+  background-color: #fff;
+}
+.registerActive{
+  display: block;
+}
+.registerDeactive{
+  display: none;
+}
+
+.userButton:hover{
+  cursor: pointer;
+  background-color: #DD0285;
+  color: white;
+}
+
+#regis:hover{
+  cursor: pointer;
+  color: #DD0285;
+}
+
+#log{
+  cursor: pointer;
+  color: #DD0285;
+}
+/* #regislogin { z-index: 99 !important; } */
+
+
+
+
+
+
+
+
+/* #cartProducts_Div{
+  border: 1px solid darkblue;
+  display: grid;
+  grid-template-columns: repeat(4,1fr); */
+  /* width: 50%; */
+  /* margin: auto; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  /* gap:30px; */
+  /* align-items: center;/ */
+  /* text-align: center; */
+ 
+/* } */
+/*  */

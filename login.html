@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        
+
+body{
+    background-color: rgb(251, 254, 254);
+}
+
+
+.signup{
+    width: 30%;
+    height: 600px;
+    margin: auto;
+    border-radius: 5px;
+    /* border: 1px solid red;  */
+    padding: 15px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+
+}
+
+h1{
+    text-align: center;
+    padding-top: 15px;
+}
+
+#form{
+    width: 100%;
+    /* border: 1px solid blueviolet; */
+    /* padding: 10px; */
+}
+
+p{
+    text-align: center;
+}
+#form label{
+    display: flex;
+    margin-top: 15px;
+    font-size: 15px;
+    /* border: 2px solid blue; */
+
+}
+
+#form input{
+    width: 100%;
+    padding: 0px;
+    height: 27px;
+    border-radius: 6px;
+    border: none;
+    border: 1px solid gray;
+    /* border: 2px solid blue; */
+    /* outline: none; */
+}
+
+ #form>input:last-child{
+    /* border: 1px solid yellowgreen; */
+    margin-top: 17px;
+    height: 35px;
+ }
+ 
+ .login{
+    width: 25%;
+    height: 300px;
+    margin: auto;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    padding: 15px;
+   
+ }
+    </style>
+
+    <div class="login">
+        <h1>login</h1>
+        <form id="form">
+           <label for="">Email</label>
+           <input id="email" type="email" placeholder="Enter your email">
+           <label for="">Password</label>
+           <input id="paas" type="password" placeholder="Enter your password">
+           <!-- <label for="">Confirm paasword</label> -->
+           <!-- <input type="paasword" placeholder="confirm paasword"> -->
+           <input type="submit" value="Login">
+          </form>
+          
+          <p>Not have an account? <a href="register.html">Register here</a></p>
+      </div>
+          
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    
+
+let a = JSON.parse(localStorage.getItem("addData"));
+
+let email = document.querySelector("#email");
+ let paas = document.querySelector("#paas");
+
+
+document.querySelector("#form").addEventListener("submit",function(event){
+    event.preventDefault();
+   
+
+    a.forEach(function(el,i){
+        // console.log(el.email)
+      if(el.email=== email.value && el.paas===paas.value ){
+        alert("login successful");
+        window.open("./index.html","_self");
+      }else{
+        alert("invalid credentials");
+      }
+    //   console.log(email.value,paas.value);
+    //   console.log("****************");
+    //   console.log(el.email,el.paas);
+        
+    })
+})
+
+ 
+</script>

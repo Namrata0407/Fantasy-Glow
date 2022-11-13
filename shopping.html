@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #maindiv{
+            border: 1px solid black;
+            height: 500px;
+            width: 35%;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+        #maindiv>h1{
+            color: gray;
+            text-align: center;
+        }
+        #subtotal{
+            display: flex;
+            gap: 340px;
+            margin-bottom: 25px;
+        }
+        #subtotal>div:nth-child(1){
+         margin-left: 22px;
+        }
+
+        #shipdiv{
+            display: flex;
+            gap: 90px;
+            margin-bottom: 25px;
+        }
+        #shipdiv>div:nth-child(1){
+         margin-left: 17px;
+        }
+        
+
+        #ordertotal{
+            display: flex;
+            gap: 235px;
+            margin-bottom: 25px;
+        }
+        #ordertotal>div:nth-child(1){
+         margin-left: 19px;
+        }
+
+        #dis{
+            display: flex;
+            gap: 130px;
+            margin-bottom: 25px;
+        }
+        #dis>div:nth-child(1){
+         margin-left: 19px;
+        }
+
+        
+        
+        #CHEKOUT{
+            margin: auto;
+            text-align: center;
+            margin-top: 70px;
+           
+        }
+
+        #CHEKOUT>button{
+            padding: 20px;
+            /* height: 12px; */
+            font-size: 18px;
+            font-weight: bolder;
+            color: white;
+            background-color: #DD0285;
+    
+            /* border: 1px solid blue; */
+            text-align: center;
+        }
+
+        #CHEKOUT>button:hover{
+            background-color: #444444;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="maindiv">
+        <h1>SUMMARY</h1>
+        <hr>
+        <div id="subtotal">
+            <div>Total</div> 
+            <div>₹</div>
+        </div>
+        <hr>
+        <div id="shipdiv">
+            <div>Shipping (Best Way - Max 7 Business days)</div>
+            <div>₹55.00</div>
+        </div>
+        <hr>
+
+        <div id="ordertotal">
+            <div>Order Total Incl. GST</div>
+            <div>₹</div>
+        </div>
+       <hr>
+
+       <div id="dis">
+        <div>APPLY DISCOUNT CODE</div>
+        <div><input type="text" name="" id="" placeholder=""></div>
+       </div>
+       <hr>
+
+       <div id="CHEKOUT"><BUtton>PROCEED TO CHECKOUT</BUtton></div>
+        
+
+    </div>
+</body>
+</html>
