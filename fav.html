@@ -17,9 +17,11 @@
 <script>
     let favProducts = JSON.parse(localStorage.getItem('fav-products'))  ||  [];
      favCart(favProducts);
-       console.log(favProducts);
+    //    console.log(favProducts);
+    
 
      function favCart(data){
+        document.querySelector('#fovcontainer').innerHTML = null;
         data.forEach(function(el,i){
        
 
@@ -37,8 +39,12 @@
         let add1 = document.createElement('button');
         add1.classList.add("btnAddtOfAV1")
         add1.innerText = "Add to cart";
-
        
+        add1.addEventListener('click',function(event){
+            addtoCart(el,i,event)
+            // deleteData(el,i,event);
+            
+        })
 
         div2.append(img1,title1,price1,add1);
         console.log(div2)
@@ -47,6 +53,37 @@
 
     })
     }
+
+
+    function addtoCart(el,i,event){
+   
+
+   let newData = JSON.parse(localStorage.getItem("cart-Products")) || [];
+   newData.push(el);
+
+   localStorage.setItem('cart-Products',JSON.stringify(newData))
+
+//    favCart(newData);
+   alert("Product has been added to your Cart");
+
+  console.log(newData)
+  deleteData(el,i,event)
+}
+
+// document.querySelector("#but").addEventListener("click",function(){
+//    window.open("cart.html","_self");
+// })
+
+function deleteData(el,i,event){
+    event.target.parentNode.remove();
+
+    let newDatadlt = JSON.parse(localStorage.getItem('fav-products'))  ||  [];
+
+    newDatadlt.splice(i,1);
+
+
+  localStorage.setItem('fav-products',JSON.stringify(newDatadlt))
+}
 
 
 </script>

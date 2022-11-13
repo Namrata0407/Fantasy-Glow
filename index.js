@@ -30,21 +30,25 @@ let data = [
         image: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/b/b/bbj0001565-1.jpg",
         title: "Aroma Magic Activated Bamboo Charcoal Face Wash",
         price:  210.00, 
+        quantity:1,
     },
     {
         image: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/b/b/bbj0001368-2.jpg",
         title: "Head & Shoulders Anti-Dandruff Anti Hair Fall Shampoo - (340ml)",
         price:  285.00, 
+        quantity:1,
     },
     {
         image: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/g/g/ggggghh.jpg",
         title: "Himalaya Herbals Anti-Wrinkle Cream - Pack Of 2",
         price: 200.00, 
+        quantity:1,
     },
     {
         image: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/_/1/.111.jpg",
         title: "Himalaya Herbals Purifying Neem Foaming Face Wash - Pack Of 2",
         price:  423.00, 
+        quantity:1,
     },
     // {
     //     image: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/u/n/untitled-1_4.jpg",
@@ -139,48 +143,57 @@ document.querySelector("#myfav").addEventListener("click",function(){
 let data1 = [
 
     {
-        image1: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/d/2/d28bf778903487024816_1.jpg",
-        title1: "Miss Claire Blusher Kit - 3660-B-3",
-        price1:  410.00, 
+        image: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/d/2/d28bf778903487024816_1.jpg",
+        title: "Miss Claire Blusher Kit - 3660-B-3",
+        price:  410.00, 
+        quantity:1,
     },
     {
-        image1: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/3/7/3732f778903487000209_1.jpg",
-        title1: "Miss Claire Eyeshadow Kit - 3716-11-3",
-        price1:  395.00, 
+        image: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/3/7/3732f778903487000209_1.jpg",
+        title: "Miss Claire Eyeshadow Kit - 3716-11-3",
+        price:  395.00, 
+        quantity:1,
     },
     {
-        image1: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/b/d/bdd30238903487002319_1.jpg",
-        title1: "Miss Claire M20 - Pointed Blending",
-        price1:  375.00, 
+        image: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/b/d/bdd30238903487002319_1.jpg",
+        title: "Miss Claire M20 - Pointed Blending",
+        price:  375.00, 
+        quantity:1,
     },
     {
-        image1: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/6/1/610f0238903487002296_1.jpg",
-        title1: "Miss Claire M19 - Eyeshadow Blending",
-        price1:  375.00, 
+        image: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/6/1/610f0238903487002296_1.jpg",
+        title: "Miss Claire M19 - Eyeshadow Blending",
+        price:  375.00, 
+        quantity:1,
     },
 ];
 
 
 function appendItem1(){
+    document.querySelector('#mid-banner-5').innerHTML = null;
+
     data1.forEach(function(el,i){
-        console.log(el.title1,el.price1)
+        // console.log(el.title,el.price1)
 
         let div2 = document.createElement('div');
 
         let img1 = document.createElement('img');
-        img1.setAttribute('src',el.image1);
+        img1.setAttribute('src',el.image);
 
         let title1 = document.createElement('p');
-        title1.innerText = el.title1;
+        title1.innerText = el.title;
 
         let price1 = document.createElement('p');
-        price1.innerText = "₹" + el.price1;
+        price1.innerText = "₹" + el.price;
+
+        
 
         let add1 = document.createElement('button');
         add1.classList.add("btnAddtOfAV1")
         add1.innerText = "Add to cart";
         add1.addEventListener('click',function(){
-            addtoCart(el)
+                  console.log(el)
+             addtoCart(el)
         })
 
         let div3 = document.createElement('div');
@@ -263,3 +276,40 @@ function addtoCart1(el){
 document.querySelector("#but").addEventListener("click",function(){
     window.open("cart.html","_self");
 })
+
+
+
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>       my account     >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  document.querySelector('.userButton').addEventListener('click', function(){
+    // console.log("************************");
+    let btnAc = document.querySelector('.registerDeactive');
+    if(btnAc.style.display==="block"){
+        btnAc.style.display ="none";
+    }else{
+        btnAc.style.display ="block";
+    }
+      
+  })
+
+  document.querySelector('#regis').addEventListener('click', function(){
+      window.open("./register.html","_self")
+  })
+
+  document.querySelector('#log').addEventListener('click', function(){
+    window.open("./login.html","_self")
+})
+
+//  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  
+
+// function search(){
+//     let q = document.querySelector('#searchprodcut').value;
+//     let newDataS = data.filter(function(el){
+//         return el.title.toLowerCase().includes(q.toLowerCase());
+//     })
+//     appendItem(newDataS);
+// }

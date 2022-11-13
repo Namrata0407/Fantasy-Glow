@@ -1,23 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cart</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <!-- <h1 id="carth1"> <span id="cartspan">🛍️ SHOPPING CART 🛍️</span></h1> -->
+   
+  <style>
+   
+
+   #cartProducts_Div{
+    border: 1px dashed blue;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    height: auto;
+    text-align: center;
+    gap: 15px;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+
+   }
+
+   #cartProducts_Div>div{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   }
+ 
+   #cartProducts_Div>div>img{
+    width: 100%;
+   }
+
+#carth1{
+  text-align: center;
+  /* border: 1px solid #C60277; */
+}
+
+
+#shopping{
+    display: flex;
+    justify-content: space-around;
+}
+
+#buy_proceed{
+   margin-top: 15px;
+   border-radius: 10px;
+   font-weight: bold;
+   color: #fff;
+   background-color: #C60277;
+
+}
+
+#buy_proceed:hover{
+    cursor: pointer;
+}
+ #totalp{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background-color: #C60277;
+    width: 20%;
+    margin-top: -10px;
+    margin: auto;
+ }
+  </style>
+
+ 
 </head>
 <body>
-    <div id="cart-container"></div>
+
+    <div id="shopping">
+        <h1 id="carth1"> SHOPPING CART 🛍️</h1>
+        <button id="buy_proceed">Proceed to Buy</button>
+    </div>
+    <p id="totalp">Total price:- <span id="totalprice">0</span></p>
+    <div id="cartProducts_Div"></div>
+  
 </body>
 </html>
 
 <script>
-    let cartProduct = JSON.parse(localStorage.getItem('cart-Products'))  ||  [];
 
-    CartItems(cartProduct);
-    //    console.log(cartProduct);
+    let total = 0;
+    let cartdata=JSON.parse(localStorage.getItem("cart-Products")) || [];
 
-     function CartItems(data){
+    displayCart(cartdata);
+    //    console.log(favProducts);
+    
+
+     function displayCart(data){
+        document.querySelector('#cartProducts_Div').innerHTML = null;
         data.forEach(function(el,i){
        
 
@@ -32,19 +104,95 @@
         let price1 = document.createElement('p');
         price1.innerText = "₹" + el.price;
 
-        let add1 = document.createElement('button');
-        add1.classList.add("btnAddtOfAV1")
-        add1.innerText = "Add to cart";
+        let btn1 = document.createElement('button');
+        btn1.innerText = "+";
+        btn1.addEventListener('click',function(){
+            span.innerText=+(span.innerText)+1;
+            increase(el,data);
+        })
 
-       
+        let span=document.createElement("span");
+        // span.classList
+        span.innerText = el.quantity;
+        total = total + el.price*el.quantity;
 
-        div2.append(img1,title1,price1,add1);
+        // document.querySelector('#totalprice').innerText = total;
+        
+
+        //  if(el.quantity === undefined){
+        //    console.log("000000000000000000")
+        //    el.quantity = 1;
+           
+        //  }
+        //  console.log(el)
+
+        //  localStorage.setItem('cart-Products',JSON.stringify())
+
+        let btn2 = document.createElement('button');
+        btn2.innerText = "-";
+        btn2.addEventListener('click',function(){
+            if(span.innerText>=2){
+                span.innerText=+(span.innerText)-1;
+                 decrease(el,data);
+            }
+            
+        })
+
+        let btn3 = document.createElement('button');
+        btn3.innerText = "Remove";
+        btn3.addEventListener('click',function(){
+            rmvbtn(el,i,event);
+        })
+
+
+        div2.append(img1,title1,price1,btn1,span,btn2,btn3);
         // console.log(div2)
         
-        document.querySelector('#cart-container').append(div2);
+        document.querySelector('#cartProducts_Div').append(div2);
 
     })
+
+    // console.log(data)
     }
+    document.querySelector('#totalprice').innerText = total;
+       
+
+        function  increase(el,data){
+            el.quantity++;
+            total = total +el.price;
+            localStorage.setItem('cart-Products',JSON.stringify(data))
+            document.querySelector('#totalprice').innerText = total;
+        }
 
 
+        function decrease(el,data){
+
+            el.quantity--;
+
+            localStorage.setItem('cart-Products',JSON.stringify(data))
+            total = total - el.price;
+            document.querySelector('#totalprice').innerText = total;
+
+        }
+
+
+        function rmvbtn(el,i,event){
+            event.target.parentNode.remove();
+
+
+            let newData = JSON.parse(localStorage.getItem("cart-Products")) || [];
+            newData.splice(i,1);
+
+            localStorage.setItem('cart-Products',JSON.stringify(newData));
+            total = 0;
+            displayCart(newData);
+
+            document.querySelector('#totalprice').innerText = total;
+        }
+
+// ...................................................................................................................................................
+
+     document.querySelector('#buy_proceed').addEventListener('click',function(){
+        window.open("./shopping.html", "_self");
+     })
 </script>
