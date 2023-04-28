@@ -155,13 +155,14 @@
     // console.log(data)
     }
     document.querySelector('#totalprice').innerText = total;
-       
+       localStorage.setItem('total-price',total)
 
         function  increase(el,data){
             el.quantity++;
             total = total +el.price;
             localStorage.setItem('cart-Products',JSON.stringify(data))
             document.querySelector('#totalprice').innerText = total;
+            localStorage.setItem('total-price',total)
         }
 
 
@@ -172,6 +173,7 @@
             localStorage.setItem('cart-Products',JSON.stringify(data))
             total = total - el.price;
             document.querySelector('#totalprice').innerText = total;
+            localStorage.setItem('total-price',total)
 
         }
 
@@ -188,13 +190,14 @@
             displayCart(newData);
 
             document.querySelector('#totalprice').innerText = total;
+            localStorage.setItem('total-price',total)
         }
 
 // ...................................................................................................................................................
 
      document.querySelector('#buy_proceed').addEventListener('click',function(){
-        // window.open("./shopping.html", "_self");
-        alert('order successful')
+        window.open("./shopping.html", "_self");
+        // alert('order successful')
      })
 
 
