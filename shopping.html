@@ -79,6 +79,9 @@
             background-color: #444444;
             cursor: pointer;
         }
+        #add{
+            color: #DD0285;
+        }
     </style>
 </head>
 <body>
@@ -87,7 +90,7 @@
         <hr>
         <div id="subtotal">
             <div>Total</div> 
-            <div>₹</div>
+            <div id="total-cost">₹</div>
         </div>
         <hr>
         <div id="shipdiv">
@@ -98,13 +101,13 @@
 
         <div id="ordertotal">
             <div>Order Total Incl. GST</div>
-            <div>₹</div>
+            <div id="final-price">₹</div>
         </div>
        <hr>
 
        <div id="dis">
         <div>APPLY DISCOUNT CODE</div>
-        <div><input type="text" name="" id="" placeholder=""></div>
+        <div><input type="text" name="" id="promo" placeholder=""><button id="add">●</button></div>
        </div>
        <hr>
 
@@ -114,3 +117,38 @@
     </div>
 </body>
 </html>
+
+<script>
+
+      let  x = localStorage.getItem('total-price');
+
+      let y = Number(x);
+
+    document.getElementById('total-cost').innerText = "₹ " + localStorage.getItem('total-price');
+    document.getElementById('final-price').innerText = "₹ "  + (55 + y);
+
+
+    let promobtn = document.querySelector('#add');
+    promobtn.addEventListener('click',myfun);
+
+    function myfun(){
+        let a = document.querySelector('#promo');
+        if(a.value === "namrata"){
+
+        discountPrice = y-(100*0.3);
+        document.getElementById('final-price').innerText = "₹ "  + discountPrice;
+        alert("Cupon code is applied")
+       
+        }else{
+            alert('invalid coupon');
+        }
+    }
+
+   document.querySelector('#CHEKOUT').addEventListener('click', check);
+   function check(){
+    alert("Payment successful");
+    window.open("./index.html", "_self");
+
+   }
+    
+</script>
